@@ -13,6 +13,46 @@ package dev.anhuar;
  * ========================================================
  */
 
+import dev.anhuar.handler.CommandHandler;
+import dev.anhuar.handler.ListenerHandler;
+import dev.anhuar.handler.MongoHandler;
+import dev.anhuar.util.ConfigUtil;
+import lombok.Getter;
+import lombok.Setter;
+import net.dv8tion.jda.api.JDA;
+
+@Getter
 public class InfinityBot {
+
+    @Getter
+    private static InfinityBot instance;
+
+    @Getter
+    @Setter
+    private JDA jda;
+
+    @Getter
+    ConfigUtil setting, message;
+
+    private CommandHandler commandHandler;
+    private ListenerHandler listenerHandler;
+    private MongoHandler mongoHandler;
+
+    public void onEnable() {
+
+        instance = this;
+
+        setting = new ConfigUtil("settings");
+        message = new ConfigUtil("messages");
+
+        commandHandler = new CommandHandler();
+        listenerHandler = new ListenerHandler();
+        mongoHandler = new MongoHandler();
+
+    }
+
+    public void onDisable() {
+
+    }
 
 }

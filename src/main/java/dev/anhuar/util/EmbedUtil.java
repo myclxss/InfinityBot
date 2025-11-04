@@ -13,6 +13,24 @@ package dev.anhuar.util;
  * ========================================================
  */
 
+import net.dv8tion.jda.api.EmbedBuilder;
+
+import java.awt.*;
+
 public class EmbedUtil {
 
+    public static EmbedBuilder complete(String title, String description, String color) {
+        return new EmbedBuilder()
+                .setTitle(title)
+                .setDescription(description)
+                .setColor(Color.decode(color));
+    }
+
+    public static EmbedBuilder description(String title, String color, String... lines) {
+        String description = String.join("\n", lines);
+        return new EmbedBuilder()
+                .setTitle(title)
+                .setDescription(description)
+                .setColor(Color.decode(color));
+    }
 }
