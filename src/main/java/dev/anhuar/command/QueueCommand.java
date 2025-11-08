@@ -1,8 +1,8 @@
-package dev.anhuar.interfaces;
+package dev.anhuar.command;
 
 /*
  * ========================================================
- * InfinityBot - IListener.java
+ * InfinityBot - QueueCommand.java
  *
  * @author Anhuar Ruiz | Anhuar Dev | myclass
  * @web https://anhuar.dev
@@ -13,12 +13,6 @@ package dev.anhuar.interfaces;
  * ========================================================
  */
 
-import net.dv8tion.jda.api.events.Event;
-
-public interface IListener<T extends Event> {
-
-    void onEvent(T event);
-
-    Class<T> getEventType();
+public class QueueCommand {
 
 }

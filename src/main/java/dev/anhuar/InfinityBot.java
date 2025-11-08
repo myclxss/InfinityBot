@@ -47,7 +47,7 @@ public class InfinityBot {
 
         commandHandler = new CommandHandler();
         listenerHandler = new ListenerHandler();
-        mongoHandler = new MongoHandler();
+        mongoHandler = new MongoHandler(this);
 
     }
 

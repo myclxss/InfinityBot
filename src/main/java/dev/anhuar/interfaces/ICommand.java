@@ -1,5 +1,18 @@
 package dev.anhuar.interfaces;
 
+/*
+ * ========================================================
+ * InfinityBot - ICommand.java
+ *
+ * @author Anhuar Ruiz | Anhuar Dev | myclass
+ * @web https://anhuar.dev
+ * @date 07/11/25
+ *
+ * License: MIT License - See LICENSE file for details.
+ * Copyright (c) 2025 Anhuar Dev. All rights reserved.
+ * ========================================================
+ */
+
 import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.interactions.commands.build.CommandData;

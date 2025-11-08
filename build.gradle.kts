@@ -22,10 +22,6 @@ dependencies {
 
     //MANAGE FILES
     implementation("org.yaml:snakeyaml:2.0")
-
-    //LIB COMMANDS
-    implementation("io.github.revxrsal:lamp.common:v4.0.0-rc.14")
-    implementation("io.github.revxrsal:lamp.jda:v4.0.0-rc.14")
 }
 
 tasks.test {
