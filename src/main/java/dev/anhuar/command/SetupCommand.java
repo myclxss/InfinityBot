@@ -29,7 +29,7 @@ public class SetupCommand implements ICommand {
         }
 
         switch (subCommand.toLowerCase()) {
-            case "" -> {
+            case "register" -> {
                 event.reply("").setEphemeral(true).queue();
             }
             default -> {
