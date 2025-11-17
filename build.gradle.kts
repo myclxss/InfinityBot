@@ -11,6 +11,7 @@ repositories {
 
 dependencies {
     implementation("net.dv8tion:JDA:6.1.0")
+    implementation("org.slf4j:slf4j-api:2.0.9")
 
     //ANOTATIONS
     compileOnly("org.projectlombok:lombok:1.18.42")

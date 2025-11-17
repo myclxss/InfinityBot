@@ -28,7 +28,7 @@ public class ListenerHandler extends ListenerAdapter {
 
     public ListenerHandler() {
 
-        registerListener(new JoinDefaultRole());
+//        registerListener(new JoinDefaultRole());
     }
 
     public void registerListener(IListener<?> listener) {
