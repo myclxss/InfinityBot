@@ -39,7 +39,6 @@ public class InfinityBot {
 
     private CommandHandler commandHandler;
     private ListenerHandler listenerHandler;
-    private MongoHandler mongoHandler;
 
     public static void main(String[] args) {
         new InfinityBot().onEnable();
@@ -49,12 +48,11 @@ public class InfinityBot {
 
         instance = this;
 
-        setting = new ConfigUtil("settings");
-        message = new ConfigUtil("messages");
+        setting = new ConfigUtil("setting");
+        message = new ConfigUtil("message");
 
         commandHandler = new CommandHandler();
         listenerHandler = new ListenerHandler();
-        mongoHandler = new MongoHandler(this);
 
         initializeManager = new InitializeManager();
         initializeManager.start();

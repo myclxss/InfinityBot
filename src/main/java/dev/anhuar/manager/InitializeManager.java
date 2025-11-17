@@ -58,7 +58,7 @@ public class InitializeManager {
                     )
                     .setMemberCachePolicy(MemberCachePolicy.ALL)
                     .setChunkingFilter(ChunkingFilter.ALL)
-                    .setActivity(Activity.playing("Sealy World"));
+                    .setActivity(Activity.playing("HOla"));
 
             jda = jdaBuilder.build();
 
