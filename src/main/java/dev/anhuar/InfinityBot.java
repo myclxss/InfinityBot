@@ -15,7 +15,6 @@ package dev.anhuar;
 
 import dev.anhuar.handler.CommandHandler;
 import dev.anhuar.handler.ListenerHandler;
-import dev.anhuar.handler.MongoHandler;
 import dev.anhuar.manager.InitializeManager;
 import dev.anhuar.util.ConfigUtil;
 import lombok.Getter;
@@ -60,7 +59,5 @@ public class InfinityBot {
     }
 
     public void onDisable() {
-
     }
-
 }

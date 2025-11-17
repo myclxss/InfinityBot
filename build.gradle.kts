@@ -9,7 +9,7 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
-            maven("https://jitpack.io")
+    maven("https://jitpack.io")
 }
 
 dependencies {

@@ -31,7 +31,7 @@ public class RankCommand implements ICommand {
             return;
         }
 
-        switch (subCommand.toLowerCase()){
+        switch (subCommand.toLowerCase()) {
             case "add" -> {
                 event.reply("Rank Command Subcommand 1 executed.").setEphemeral(true).queue();
             }
