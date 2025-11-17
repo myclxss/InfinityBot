@@ -13,10 +13,16 @@ package dev.anhuar.command;
  * ========================================================
  */
 
+import dev.anhuar.InfinityBot;
 import dev.anhuar.interfaces.ICommand;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
+import net.dv8tion.jda.api.interactions.commands.build.CommandData;
+import net.dv8tion.jda.api.interactions.commands.build.Commands;
+import net.dv8tion.jda.api.interactions.commands.build.SubcommandData;
 
 public class SetupCommand implements ICommand {
+
+    private final InfinityBot bot = InfinityBot.getInstance();
 
     @Override
     public void execute(SlashCommandInteractionEvent event) {
@@ -30,7 +36,7 @@ public class SetupCommand implements ICommand {
 
         switch (subCommand.toLowerCase()) {
             case "register" -> {
-                event.reply("").setEphemeral(true).queue();
+                bot.getManagerHandler().getSetupManager().registerSetup(event);
             }
             default -> {
 
@@ -47,5 +53,13 @@ public class SetupCommand implements ICommand {
     @Override
     public String getDescription() {
         return "Realiza el setup de los embeds y canales para el bot";
+    }
+
+    @Override
+    public CommandData buildCommandData() {
+        return Commands.slash(getName().toLowerCase(), getDescription())
+                .addSubcommands(
+                        new SubcommandData("register", "Setup the registration embed and components")
+                );
     }
 }

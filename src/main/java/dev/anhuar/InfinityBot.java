@@ -15,6 +15,7 @@ package dev.anhuar;
 
 import dev.anhuar.handler.CommandHandler;
 import dev.anhuar.handler.ListenerHandler;
+import dev.anhuar.handler.ManagerHandler;
 import dev.anhuar.manager.InitializeManager;
 import dev.anhuar.util.ConfigUtil;
 import lombok.Getter;
@@ -38,6 +39,7 @@ public class InfinityBot {
 
     private CommandHandler commandHandler;
     private ListenerHandler listenerHandler;
+    private ManagerHandler managerHandler;
 
     public static void main(String[] args) {
         new InfinityBot().onEnable();
@@ -52,6 +54,7 @@ public class InfinityBot {
 
         commandHandler = new CommandHandler();
         listenerHandler = new ListenerHandler();
+        managerHandler = new ManagerHandler();
 
         initializeManager = new InitializeManager();
         initializeManager.start();

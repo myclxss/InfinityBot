@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    implementation("net.dv8tion:JDA:5.0.1")
+    implementation("net.dv8tion:JDA:6.1.1")
     implementation("org.slf4j:slf4j-api:2.0.9")
     implementation("ch.qos.logback:logback-classic:1.5.13")
 

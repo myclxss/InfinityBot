@@ -14,6 +14,7 @@ package dev.anhuar.handler;
  */
 
 import dev.anhuar.command.RankCommand;
+import dev.anhuar.command.SetupCommand;
 import dev.anhuar.interfaces.ICommand;
 import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
@@ -32,6 +33,7 @@ public class CommandHandler extends ListenerAdapter {
     public CommandHandler() {
 
         registerCommand(new RankCommand());
+        registerCommand(new SetupCommand());
 
     }
 
