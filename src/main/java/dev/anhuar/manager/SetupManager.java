@@ -13,7 +13,6 @@ package dev.anhuar.manager;
  * ========================================================
  */
 
-import dev.anhuar.InfinityBot;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.components.actionrow.ActionRow;
 import net.dv8tion.jda.api.components.buttons.Button;
@@ -24,8 +23,6 @@ import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEve
 import java.awt.*;
 
 public class SetupManager {
-
-    private final InfinityBot bot = InfinityBot.getInstance();
 
     public void registerSetup(SlashCommandInteractionEvent event) {
 
@@ -53,7 +50,7 @@ public class SetupManager {
                 .build();
 
         // Botón de registro
-        net.dv8tion.jda.api.components.buttons.Button registerButton = Button.primary("register-profile", "Register / Update Profile").withEmoji(Emoji.fromUnicode("📝"));
+        Button registerButton = Button.primary("register-profile", "Register / Update Profile").withEmoji(Emoji.fromUnicode("📝"));
 
         event.replyEmbeds(embed.build()).addComponents(ActionRow.of(registerButton), ActionRow.of(tierMenu)).queue();
     }

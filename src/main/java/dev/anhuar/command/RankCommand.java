@@ -13,13 +13,10 @@ package dev.anhuar.command;
  * ========================================================
  */
 
-import dev.anhuar.InfinityBot;
 import dev.anhuar.interfaces.ICommand;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 
 public class RankCommand implements ICommand {
-
-    private final InfinityBot bot = InfinityBot.getInstance();
 
     @Override
     public void execute(SlashCommandInteractionEvent event) {
