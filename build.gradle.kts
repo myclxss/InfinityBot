@@ -1,7 +1,7 @@
 plugins {
     id("java")
     id("application")
-    id("com.github.johnrengelman.shadow") version "8.1.1"
+    id("com.gradleup.shadow") version "9.0.0-beta13"
 }
 
 group = "dev.anhuar"
@@ -9,7 +9,7 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
-    maven("https://jitpack.io")
+    maven("https://jitpack.io") 
 }
 
 dependencies {
